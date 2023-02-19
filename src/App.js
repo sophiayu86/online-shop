@@ -1,9 +1,7 @@
-// import "./App.css";
-import "./main.css";
-import Cart from "./components/cart/Cart";
-import ProgressControl from "./components/checkoutForm/ProgressControl";
-import Steps from "./components/checkoutForm/Steps";
-import StepProgress from "./components/checkoutForm/StepProgress";
+import Cart from "./components/Cart/Cart";
+import ProgressControl from "./components/Form/ProgressControl";
+import Steps from "./components/Form/Steps";
+import StepProgress from "./components/Form/StepProgress";
 
 function App() {
   return (

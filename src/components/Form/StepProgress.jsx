@@ -6,9 +6,6 @@ function StepProgress() {
       <span className="progress-group" data-phase="address">
         <span className="progress-icon">
           <span className="text">1</span>
-          {/* <svg className="icon cursor-point">
-                  <use xlink:href="#svg-icon-pg-complete"></use>
-                </svg> */}
           <AiFillCheckCircle className="icon cursor-point" />
         </span>
         <span className="progress-label">寄送地址</span>
@@ -17,9 +14,6 @@ function StepProgress() {
       <span className="progress-group" data-phase="shipping">
         <span className="progress-icon">
           <span className="text">2</span>
-          {/* <svg className="icon cursor-point">
-                  <use xlink:href="#svg-icon-pg-complete"></use>
-                </svg> */}
           <AiFillCheckCircle className="icon cursor-point" />
         </span>
         <span className="progress-label">運送方式</span>

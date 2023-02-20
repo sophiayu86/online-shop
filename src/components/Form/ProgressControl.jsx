@@ -1,5 +1,5 @@
-import arrowRight from "../../img/arrow_rig.png";
-import arrowLeft from "../../img/arrow_left.png";
+import arrowRight from "img/arrow_rig.png";
+import arrowLeft from "img/arrow_left.png";
 function ProgressControl() {
   return (
     <section className="progress-control-container col col-lg-6 col-sm-12">

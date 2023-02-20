@@ -1,8 +1,8 @@
 import React from "react";
-import product1 from "../../img/product-1.jpg";
-import product2 from "../../img/product-2.jpg";
-import { ReactComponent as Minus } from "../../img/minus.svg";
-import { ReactComponent as Plus } from "../../img/plus.svg";
+import product1 from "img/product-1.jpg";
+import product2 from "img/product-2.jpg";
+import { ReactComponent as Minus } from "img/minus.svg";
+import { ReactComponent as Plus } from "img/plus.svg";
 const initialArray = [
   {
     id: "1",

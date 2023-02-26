@@ -22,9 +22,6 @@ function StepProgress() {
       <span className="progress-group" data-phase="credit-card">
         <span className="progress-icon">
           <span className="text">3</span>
-          {/* <svg className="icon cursor-point">
-                  <use xlink:href="#svg-icon-pg-complete"></use>
-                </svg> */}
           <AiFillCheckCircle className="icon cursor-point" />
         </span>
         <span className="progress-label">付款資訊</span>

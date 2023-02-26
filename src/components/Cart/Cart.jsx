@@ -1,8 +1,9 @@
 import React from "react";
 import product1 from "img/product-1.jpg";
 import product2 from "img/product-2.jpg";
-import { ReactComponent as Minus } from "img/minus.svg";
-import { ReactComponent as Plus } from "img/plus.svg";
+import { useState } from "react";
+import Product from "./Product";
+
 const initialArray = [
   {
     id: "1",
@@ -19,8 +20,13 @@ const initialArray = [
     quantity: 1,
   },
 ];
-
+let intitalTotal = 0;
+initialArray.forEach((product) => {
+  return (intitalTotal += product.price * product.quantity);
+});
 function Cart() {
+  const [total, setTotal] = useState(intitalTotal);
+  
   return (
     <section className="cart-container col col-lg-5 col-sm-12">
       <h3 className="cart-title">購物籃</h3>
@@ -28,29 +34,12 @@ function Cart() {
       <section className="product-list col col-12" data-total-price="0">
         {initialArray.map((product) => {
           return (
-            <div
+            <Product
               key={product.id}
-              className="product-container col col-12"
-              data-count="0"
-              data-price="3999"
-            >
-              <img
-                className="img-container"
-                src={product.img}
-                alt="product-1"
-              />
-              <div className="product-info">
-                <div className="product-name">{product.name}</div>
-                <div className="product-control-container">
-                  <div className="product-control">
-                    <Minus className="product-action minus" />
-                    <span className="product-count">{product.quantity}</span>
-                    <Plus className="product-action plus" />
-                  </div>
-                </div>
-                <div className="price">${product.price}</div>
-              </div>
-            </div>
+              product={product}
+              total={total}
+              setTotal={setTotal}
+            ></Product>
           );
         })}
       </section>
@@ -61,7 +50,7 @@ function Cart() {
       </section>
       <section className="cart-info total col col-12">
         <div className="text">小計</div>
-        <div className="price">$5298</div>
+        <div className="price">{total}</div>
       </section>
     </section>
   );

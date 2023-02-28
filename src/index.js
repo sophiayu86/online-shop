@@ -4,11 +4,14 @@ import './index.css';
 import './style/main.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { FormProvider } from "FormContext";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <FormProvider>
+     <App />
+     </FormProvider>
+    
   </React.StrictMode>
 );
 

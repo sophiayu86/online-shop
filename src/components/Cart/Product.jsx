@@ -1,8 +1,10 @@
 import { ReactComponent as Minus } from "img/minus.svg";
 import { ReactComponent as Plus } from "img/plus.svg";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "CartContext.js";
 
-function Product({ product, total, setTotal }) {
+function Product({ product }) {
+  const { setTotal, total } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
   function handlePlus() {
     setQuantity(quantity + 1);

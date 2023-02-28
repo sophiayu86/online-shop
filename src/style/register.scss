@@ -144,7 +144,7 @@ $phase-map: (1: 'address', 2: 'shipping', 3: 'credit-card');
                     }
                 }
 
-                @if $phase == 'address' {
+                @if $phase == 'address' or $phase == 'shipping'or $phase == 'credit-card'{
                     .progress-icon {
                         background-color: var(--pg-addr-bg-color);
                         border-color: var(--pg-addr-bg-color);
